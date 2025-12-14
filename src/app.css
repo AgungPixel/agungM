@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-400 leading-relaxed antialiased;
+  }
+
+  h1 {
+    @apply text-4xl tracking-tight font-bold text-zinc-200 sm:text-5xl;
+  }
+
+  h2 {
+    @apply mt-2 text-lg font-medium tracking-tight text-zinc-200 sm:text-xl;
+  }
+
+  nav {
+    @apply hidden lg:block;
+  }
+}
+
+@layer components {
+  .app-body {
+    @apply relative;
+  }
+
+  .glow-effect {
+    position: fixed;
+    width: 1000px;
+    height: 1000px;
+    margin-left: -500px;
+    margin-top: -500px;
+    background: radial-gradient(circle, rgba(102, 102, 102, 0.050) 0%, rgba(102, 102, 102, 0) 50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
