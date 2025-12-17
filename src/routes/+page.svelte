@@ -631,17 +631,7 @@
     </section>
     <footer class="max-w-lg pb-16 text-sm text-zinc-500 sm:pb-0">
       <!-- Copyright!! -->
-      <p>Coded in <a
-          class="font-medium text-zinc-400 hover:text-lime-200 transition-colors" href="https://code.visualstudio.com/"
-          target="_blank" rel="noopener noreferrer">Visual Code Studio</a>. Built with <a
-          href="https://svelte.dev/" class="font-medium text-zinc-400 hover:text-lime-200 transition-colors"
-          target="_blank" rel="noopener noreferrer">Svelte</a> and <a
-          class="font-medium text-zinc-400 hover:text-lime-200 transition-colors" href="https://tailwindcss.com/"
-          target="_blank" rel="noopener noreferrer">Tailwind CSS</a>, deployed with <a
-          class="font-medium text-zinc-400 hover:text-lime-200 transition-colors" href="https://pages.cloudflare.com/"
-          target="_blank" rel="noopener noreferrer">Cloudflare Pages</a>, All text is set in the <a
-          class="font-medium text-zinc-400 hover:text-lime-200 transition-colors" href="https://rsms.me/inter/"
-          target="_blank" rel="noopener noreferrer">Inter</a> typeface.</p>
+      <p class="font-medium text-center">Made with ❤️ and ☕ by <a href="/" class="text-zinc-200 hover:text-lime-300">Agung Marwanto</a></p>
     </footer>
   </main>
 </div>
