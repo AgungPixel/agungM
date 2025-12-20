@@ -2,10 +2,13 @@
     <img alt="Logo" src="https://github.com/AgungPixel/agungM/blob/e5dbd82356f374177824af3f1b622e3f43c75e98/static/images/logo.png" width="100" />
 </div>
 
-# Agung Marwanto
+<h1 align="center">
+  Agung Marwanto
+</h1>
+
 <div align="center">
 
-![demo](https://raw.githubusercontent.com/bchiang7/v4/main/src/images/demo.png)
+![demo](https://github.com/AgungPixel/agungM/blob/f78d434a4a9f620015af8ce62c4677041d8b0bae/static/images/demo.png)
 
 <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
