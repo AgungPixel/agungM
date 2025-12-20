@@ -46,10 +46,10 @@ Website portfolio pribadi yang didesain dengan pendekatan **minimalist** dan **m
 
 ```bash
 # Clone repository
-git clone https://github.com/AgungPixel/personal-website.git
+git clone https://github.com/AgungPixel/agungM.git
 
 # Masuk ke folder project
-cd personal-website
+cd agungM
 
 # Install dependencies
 npm install
