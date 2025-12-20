@@ -10,9 +10,22 @@
 
 ![demo](https://github.com/AgungPixel/agungM/blob/f78d434a4a9f620015af8ce62c4677041d8b0bae/static/images/demo.png)
 
-<a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
-</a>
+<p align="center">
+
+Inspired by  
+[**brittanychiang.com**](https://brittanychiang.com)
+
+Built with  
+[**Svelte**](https://svelte.dev)  
+and styled using  
+[**Tailwind CSS**](https://tailwindcss.com)
+
+Deployed with  
+[**Cloudflare Pages**](https://pages.cloudflare.com)
+
+![Deploy](https://img.shields.io/github/actions/workflow/status/USERNAME/REPO/deploy.yml)
+
+</p>
 
 </div>
 
