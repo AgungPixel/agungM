@@ -1,33 +1,31 @@
 <div align="center">
-    <img alt="Logo" src="https://github.com/AgungPixel/agungM/blob/e5dbd82356f374177824af3f1b622e3f43c75e98/static/images/logo.png" width="100" />
-</div>
 
-<h1 align="center">
-  Agung Marwanto
-</h1>
+<img
+  alt="Logo"
+  src="https://github.com/AgungPixel/agungM/blob/e5dbd82356f374177824af3f1b622e3f43c75e98/static/images/logo.png"
+  width="100"
+/>
 
-<div align="center">
+<h1>Agung Marwanto</h1>
 
-![demo](https://github.com/AgungPixel/agungM/blob/f78d434a4a9f620015af8ce62c4677041d8b0bae/static/images/demo.png)
+<img
+  alt="Demo"
+  src="https://github.com/AgungPixel/agungM/blob/f78d434a4a9f620015af8ce62c4677041d8b0bae/static/images/demo.png"
+/>
 
-<p align="center">
+<br />
 
-Inspired by  
-[**brittanychiang.com**](https://brittanychiang.com)
+Inspired by [**brittanychiang.com**](https://brittanychiang.com) · Built with [**Svelte**](https://svelte.dev) & [**Tailwind CSS**](https://tailwindcss.com) · Deployed on [**Cloudflare Pages**](https://pages.cloudflare.com)
 
-Built with  
-[**Svelte**](https://svelte.dev)  
-and styled using  
-[**Tailwind CSS**](https://tailwindcss.com)
-
-Deployed with  
-[**Cloudflare Pages**](https://pages.cloudflare.com)
-
-![Deploy](https://img.shields.io/github/actions/workflow/status/USERNAME/REPO/deploy.yml)
-
-</p>
+<a href="https://pages.cloudflare.com" target="_blank">
+  <img
+    src="https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white"
+    alt="Deployed on Cloudflare Pages"
+  />
+</a>
 
 </div>
+
 
 ---
 
