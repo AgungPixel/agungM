@@ -15,7 +15,7 @@
 
 <br />
 
-Inspired by [**brittanychiang.com**](https://brittanychiang.com) · Built with [**Svelte**](https://svelte.dev) & [**Tailwind CSS**](https://tailwindcss.com) · Deployed on [**Cloudflare Pages**](https://pages.cloudflare.com)
+Inspired by [**brittanychiang.com**](https://brittanychiang.com) · Built with [**Svelte**](https://svelte.dev) & [**Tailwind CSS**](https://tailwindcss.com).
 
 <a href="https://pages.cloudflare.com" target="_blank">
   <img
