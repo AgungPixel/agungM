@@ -1,14 +1,15 @@
-# 🌐 Agung Marwanto - Personal Portfolio
+<div align="center">
+    <img alt="Logo" src="https://github.com/AgungPixel/agungM/blob/e5dbd82356f374177824af3f1b622e3f43c75e98/static/images/logo.png" width="100" />
+</div>
 
+# Agung Marwanto
 <div align="center">
 
-![Svelte](https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![demo](https://raw.githubusercontent.com/bchiang7/v4/main/src/images/demo.png)
 
-**✨ Minimalist UI/UX Portfolio Website ✨**
-
-[🌍 Live Demo](https://agungmarwanto.pages.dev) • [📧 Contact](https://wa.me/6289605905457)
+<a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
+</a>
 
 </div>
 
