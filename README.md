@@ -29,55 +29,53 @@ Inspired by [**brittanychiang.com**](https://brittanychiang.com) · Built with [
 
 ---
 
-## 🎯 Tentang Project
+## 🎯 About the Project
 
-Website portfolio pribadi yang didesain dengan pendekatan **minimalist** dan **modern**. Dibangun menggunakan Svelte untuk performa optimal dan Tailwind CSS untuk styling yang fleksibel. Website ini menampilkan perjalanan profesional, pengalaman kerja, dan project-project yang telah dikerjakan.
+This is my personal portfolio website, designed with a minimalist and modern vibe.
+It’s built with Svelte for great performance and Tailwind CSS for flexible styling.
 
-> *"Simplicity is the ultimate sophistication"* – Leonardo da Vinci
+Here, you’ll find my professional journey, work experience, and some of the projects I’ve worked on.
 
-## 🛠️ Development
+“Simplicity is the ultimate sophistication” — Leonardo da Vinci
 
-### Prerequisites
+🛠️ Development
+What You’ll Need
 
-- Node.js (v16 atau lebih baru)
-- npm atau pnpm
+Before getting started, make sure you have:
 
-### Installation
+Node.js (v16 or newer)
 
-```bash
-# Clone repository
+npm or pnpm
+
+Getting Started
+# Clone the repo
 git clone https://github.com/AgungPixel/agungM.git
 
-# Masuk ke folder project
+# Go to the project folder
 cd agungM
 
 # Install dependencies
 npm install
 
-# Jalankan development server
+# Run the dev server
 npm run dev
-```
 
-Buka browser dan akses `http://localhost:5173`
 
-### Build untuk Production
+Then open your browser and visit:
+http://localhost:5173
 
-```bash
-# Build project
+Build for Production
+# Build the project
 npm run build
 
-# Preview production build
+# Preview the production build
 npm run preview
-```
 
-## 📦 Deployment
+📦 Deployment
 
-Website ini di-deploy menggunakan Cloudflare Pages dengan CI/CD otomatis. Setiap push ke branch `main` akan otomatis trigger build dan deployment baru.
+This site is deployed using Cloudflare Pages with automatic CI/CD.
+Every push to the main branch will trigger a new build and deployment.
 
-```bash
-# Deploy ke Cloudflare Pages
-npm run build
-# Upload ke Cloudflare Pages dashboard
-```
+⭐ Support
 
-⭐ Don't forget to star this repo if you like it!
+If you like this project or find it helpful, feel free to give it a ⭐ — it really helps!

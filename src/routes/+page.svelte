@@ -1,21 +1,39 @@
 <script>
   import Header from "$lib/components/header.svelte";
+  import Starfield from "$lib/components/Starfield.svelte"; 
   import { onMount } from 'svelte';
-  import { initGlowEffect } from '$lib/utils/glowEffect.js'; // Import fungsi glow effect kita
+  
+  // Pastikan import ini benar (sesuai nama export di file masing-masing)
+  import { initGlowEffect } from '$lib/utils/glowEffect.js';
+  import { isIdle } from '$lib/stores/idle.js';
 
-  let cleanupGlowEffect; // Variabel untuk menyimpan fungsi cleanup
+  let cleanupGlowEffect;
 
   onMount(() => {
-    // Inisialisasi efek glow dan simpan fungsi cleanup-nya
-    const { setupEffect, cleanupEffect } = initGlowEffect();
-    cleanupGlowEffect = cleanupEffect; // Simpan untuk dipanggil saat komponen dihancurkan
+    // --- 1. Setup Glow Effect (Dengan Pengecekan) ---
+    // Cek apakah fungsi initGlowEffect ada sebelum dijalankan
+    if (typeof initGlowEffect === 'function') {
+        const effect = initGlowEffect();
+        // Cek apakah effect mengembalikan object yang benar
+        if (effect && effect.setupEffect) {
+            effect.setupEffect();
+            cleanupGlowEffect = effect.cleanupEffect;
+        }
+    } else {
+        console.warn("Glow Effect tidak ditemukan atau gagal dimuat.");
+    }
 
-    setupEffect(); // Panggil setupEffect untuk melampirkan event listeners
-    // Ini penting agar script dijalankan setelah elemen ada di DOM.
+    // --- 2. Setup Idle Listener (Dengan Pengecekan) ---
+    let cleanupIdle;
+    if (isIdle && typeof isIdle.init === 'function') {
+        cleanupIdle = isIdle.init();
+    }
 
-    // Fungsi yang akan dijalankan saat komponen dihancurkan
+    // --- 3. Cleanup Gabungan ---
     return () => {
-      cleanupGlowEffect(); // Hapus event listeners
+      // Hanya jalankan cleanup jika fungsinya ada (valid)
+      if (typeof cleanupGlowEffect === 'function') cleanupGlowEffect();
+      if (typeof cleanupIdle === 'function') cleanupIdle();
     };
   });
 </script>
@@ -24,6 +42,9 @@
   class="absolute left-0 top-0 block rounded -translate-x-full font-bold uppercase tracking-widest text-white focus-visible:translate-x-0">Langsung
   Ke Content</a>
 <div class="lg:flex lg:justify-between lg:gap-4">
+  <div class="absolute inset-0 z-0">
+    <Starfield />
+  </div>
   <Header />
   <main id="content" class="pt-24 lg:w-[52%] lg:py-24 scroll-smooth">
     <section id="tentang" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
