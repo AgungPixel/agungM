@@ -31,7 +31,10 @@ Inspired by [**brittanychiang.com**](https://brittanychiang.com) · Built with [
 
 ## 🎯 Tentang Project
 
-Website portfolio pribadi yang didesain dengan pendekatan **minimalist** dan **modern**. Dibangun menggunakan Svelte untuk performa optimal dan Tailwind CSS untuk styling yang fleksibel. Website ini menampilkan perjalanan profesional, pengalaman kerja, dan project-project yang telah dikerjakan.
+WThis is my personal portfolio website, designed with a **minimalist** and **modern** vibe.
+It’s built with Svelte for great performance and Tailwind CSS for flexible styling.
+
+Here, you’ll find my professional journey, work experience, and some of the projects I’ve worked on.
 
 > *"Simplicity is the ultimate sophistication"* – Leonardo da Vinci
 
@@ -39,7 +42,7 @@ Website portfolio pribadi yang didesain dengan pendekatan **minimalist** dan **m
 
 ### Prerequisites
 
-- Node.js (v16 atau lebih baru)
+- Node.js (v16 or newer)
 - npm atau pnpm
 
 ### Installation
@@ -58,7 +61,7 @@ npm install
 npm run dev
 ```
 
-Buka browser dan akses `http://localhost:5173`
+Then open your browser and visit `http://localhost:5173`
 
 ### Build untuk Production
 
