@@ -10,7 +10,7 @@
 
 <img
   alt="Demo"
-  src="https://github.com/AgungPixel/agungM/blob/f78d434a4a9f620015af8ce62c4677041d8b0bae/static/images/demo.png"
+  src="https://github.com/AgungPixel/agungM/blob/c7a552633b68f3767f1fccd93b585934a60c3e29/static/images/demo.png"
 />
 
 <br />
