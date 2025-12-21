@@ -29,53 +29,52 @@ Inspired by [**brittanychiang.com**](https://brittanychiang.com) · Built with [
 
 ---
 
-## 🎯 About the Project
+## 🎯 Tentang Project
 
-This is my personal portfolio website, designed with a minimalist and modern vibe.
-It’s built with Svelte for great performance and Tailwind CSS for flexible styling.
+Website portfolio pribadi yang didesain dengan pendekatan **minimalist** dan **modern**. Dibangun menggunakan Svelte untuk performa optimal dan Tailwind CSS untuk styling yang fleksibel. Website ini menampilkan perjalanan profesional, pengalaman kerja, dan project-project yang telah dikerjakan.
 
-Here, you’ll find my professional journey, work experience, and some of the projects I’ve worked on.
+> *"Simplicity is the ultimate sophistication"* – Leonardo da Vinci
 
-“Simplicity is the ultimate sophistication” — Leonardo da Vinci
+## 🛠️ Development
 
-🛠️ Development
-What You’ll Need
+### Prerequisites
 
-Before getting started, make sure you have:
+- Node.js (v16 atau lebih baru)
+- npm atau pnpm
 
-Node.js (v16 or newer)
+### Installation
 
-npm or pnpm
-
-Getting Started
-# Clone the repo
+```bash
+# Clone repository
 git clone https://github.com/AgungPixel/agungM.git
 
-# Go to the project folder
+# Masuk ke folder project
 cd agungM
 
 # Install dependencies
 npm install
 
-# Run the dev server
+# Jalankan development server
 npm run dev
+```
 
+Buka browser dan akses `http://localhost:5173`
 
-Then open your browser and visit:
-http://localhost:5173
+### Build untuk Production
 
-Build for Production
-# Build the project
+```bash
+# Build project
 npm run build
 
-# Preview the production build
+# Preview production build
 npm run preview
+```
 
-📦 Deployment
+## 📦 Deployment
 
 This site is deployed using Cloudflare Pages with automatic CI/CD.
 Every push to the main branch will trigger a new build and deployment.
 
-⭐ Support
+## ⭐ Support
 
-If you like this project or find it helpful, feel free to give it a ⭐ — it really helps!
+If you like this project or find it helpful, feel free to give it a ⭐ it really helps!
