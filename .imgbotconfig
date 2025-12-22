@@ -1,5 +1,5 @@
 {
-  "schedule": "weekly",
+  "schedule": "daily",
   "aggressive": false,
   "ignoredPaths": [
     "node_modules/**",
