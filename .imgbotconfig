@@ -1,0 +1,8 @@
+{
+  "schedule": "weekly",
+  "aggressive": false,
+  "ignoredPaths": [
+    "node_modules/**",
+    "dist/**"
+  ]
+}
