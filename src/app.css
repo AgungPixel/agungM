@@ -1,43 +1,62 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
 @layer base {
-  html {
-    @apply scroll-smooth;
-  }
+	@font-face {
+		font-family: 'Inter';
+		src: url('/src/lib/fonts/Inter-Regular.woff2') format('woff2');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
 
-  body {
-    @apply bg-zinc-950 text-zinc-400 leading-relaxed antialiased;
-  }
+	@font-face {
+		font-family: 'Inter';
+		src: url('/src/lib/fonts/Inter-Bold.woff2') format('woff2');
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+	}
 
-  h1 {
-    @apply text-4xl tracking-tight font-bold text-zinc-200 sm:text-5xl;
-  }
+	html {
+		@apply font-sans scroll-smooth;
+	}
 
-  h2 {
-    @apply mt-2 text-lg font-medium tracking-tight text-zinc-200 sm:text-xl;
-  }
+	body {
+		@apply bg-zinc-950 leading-relaxed text-zinc-400 antialiased;
+	}
 
-  nav {
-    @apply hidden lg:block;
-  }
+	h1 {
+		@apply text-4xl font-bold tracking-tight text-zinc-200 sm:text-5xl;
+	}
+
+	h2 {
+		@apply mt-2 text-lg font-medium tracking-tight text-zinc-200 sm:text-xl;
+	}
+
+	nav {
+		@apply hidden lg:block;
+	}
 }
 
 @layer components {
-  .app-body {
-    @apply relative;
-  }
+	.app-body {
+		@apply relative;
+	}
 
-  .glow-effect {
-    position: fixed;
-    width: 1000px;
-    height: 1000px;
-    margin-left: -500px;
-    margin-top: -500px;
-    background: radial-gradient(circle, rgba(102, 102, 102, 0.050) 0%, rgba(102, 102, 102, 0) 50%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+	.glow-effect {
+		position: fixed;
+		width: 1000px;
+		height: 1000px;
+		margin-left: -500px;
+		margin-top: -500px;
+		background: radial-gradient(circle, rgba(102, 102, 102, 0.05) 0%, rgba(102, 102, 102, 0) 50%);
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
 }
