@@ -42,7 +42,7 @@
   class="absolute left-0 top-0 block rounded -translate-x-full font-bold uppercase tracking-widest text-white focus-visible:translate-x-0">Langsung
   Ke Content</a>
 <div class="lg:flex lg:justify-between lg:gap-4">
-  <div class="absolute inset-0 z-0">
+  <div class="absolute inset-0 z-0 pointer-events-none">
     <Starfield />
   </div>
   <Header />
