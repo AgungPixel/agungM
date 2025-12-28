@@ -38,15 +38,13 @@
   });
 </script>
 
-<a href="#content"
-  class="absolute left-0 top-0 block rounded -translate-x-full font-bold uppercase tracking-widest text-white focus-visible:translate-x-0">Langsung
-  Ke Content</a>
+<a href="#content" class="absolute left-0 top-0 block rounded -translate-x-full bg-gradient-to-br from bg-lime-400 via-lime-500 to-lime-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white focus-visible:translate-x-0">Langsung Ke Content</a>
 <div class="lg:flex lg:justify-between lg:gap-4">
   <div class="absolute inset-0 z-0 pointer-events-none">
     <Starfield />
   </div>
   <Header />
-  <main id="content" class="pt-24 lg:w-[52%] lg:py-24 scroll-smooth">
+  <main id="content" class="pt-24 lg:w-[52%] lg:py-24">
     <section id="tentang" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
       <div
         class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-gray-950/5 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
@@ -554,7 +552,7 @@
           <!-- Resume Project -->
           <li class="mb-12">
             <div
-              class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
+              class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
               <!-- Hover Effect Project -->
               <div
                 class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0,1)] lg:group-hover:drop-shadow-lg">
@@ -598,7 +596,7 @@
           <!-- Garlid Project -->
           <li class="mb-12">
             <div
-              class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
+              class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
               <!-- Hover Effect Project -->
               <div
                 class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0,1)] lg:group-hover:drop-shadow-lg">

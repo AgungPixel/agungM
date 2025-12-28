@@ -22,8 +22,8 @@
   	<meta property="og:url" content="https://agungmarwanto.pages.dev" />
   	<meta property="og:image" content="https://agungmarwanto.pages.dev/og-image.png" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
+  	<!-- Twitter -->
+  	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 <!-- Main container global -->
 
