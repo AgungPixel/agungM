@@ -29,7 +29,7 @@
 
 <div class="relative">
 	<div class="glow-effect" id="glowEffect"></div>
-	<div class="mx-auto min-h-screen max-w-7xl p-5 md:px-10 md:py-20 lg:py-0 lg:w-[70%]">
+	<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-16 lg:py-0">
 		{@render children()}
 	</div>
 </div>
