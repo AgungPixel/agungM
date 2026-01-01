@@ -1,6 +1,7 @@
 <script>
   import Header from "$lib/components/header.svelte";
   import Starfield from "$lib/components/Starfield.svelte"; 
+  import ArrowIcon from '$lib/icons/arrowIcons.svelte';
   import { onMount } from 'svelte';
   
   // Pastikan import ini benar (sesuai nama export di file masing-masing)
@@ -11,6 +12,7 @@
   import { experiences } from '$lib/data/experiences';
   import { projects } from '$lib/data/projects';
   import { siteConfig } from '$lib/data/site.config'; // Kalau mau pakai link resume dari config
+	import ArrowIcons from "$lib/icons/arrowIcons.svelte";
 
   let cleanupGlowEffect;
 
@@ -118,12 +120,7 @@
                           {job.role} · {job.company}
                       
                           <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out group-hover/link:-translate-y-full group-hover/link:translate-x-full">
-                              <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out group-hover/link:translate-x-0 group-hover/link:translate-y-0">
-                              <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                            </svg>
+                            <ArrowIcon />
                           </span>
                         </span>
 
@@ -154,18 +151,7 @@
             <span class="relative z-10 flex items-center">
               Lihat Résumé Selengkapnya
               <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                  class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out group-hover/link:-translate-y-full group-hover/link:translate-x-full">
-                  <path fill-rule="evenodd"
-                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                  class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out group-hover/link:translate-x-0 group-hover/link:translate-y-0">
-                  <path fill-rule="evenodd"
-                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                    clip-rule="evenodd"></path>
-                </svg>
+                <ArrowIcon />
               </span>
             </span>
           </a>
@@ -204,12 +190,7 @@
                       <span>
                         {project.title}
                         <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out group-hover/link:-translate-y-full group-hover/link:translate-x-full">
-                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                          </svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out group-hover/link:translate-x-0 group-hover/link:translate-y-0">
-                            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
-                          </svg>
+                          <ArrowIcon />
                         </span>
                       </span>
 
