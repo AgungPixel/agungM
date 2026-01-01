@@ -8,6 +8,8 @@
   import { isIdle } from '$lib/stores/idle.js';
   // Import data yang baru dibuat
   import { aboutData } from '$lib/data/about.js';
+  import { experiences } from '$lib/data/experiences';
+  import { siteConfig } from '$lib/data/site.config'; // Kalau mau pakai link resume dari config
 
   let cleanupGlowEffect;
 
@@ -96,401 +98,53 @@
       </div>
       <div>
         <ol class="group-list">
-          <li class="mb-10">
-            <div
-              class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
-              <div
-                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0,1)] lg:group-hover:drop-shadow-lg">
-              </div>
-              <!-- Tahun Bekerja -->
-              <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2"
-                aria-label="Mar sampai Agustus 2024">2025 ─ 2026</header>
-              <!-- Desc&Title -->
-              <div class="z-10 sm:col-span-6">
-                <h3 class="font-medium leading-snug text-zinc-200">
-                  <div>
-                    <a class="inline-flex items-baseline font-medium leading-tight text-zinc-200 hover:text-lime-300 focus-visible:text-lime-300  group/link text-base"
-                      href="https://www.map.co.id/id/" target="_blank" rel="noreferrer noopener"
-                      aria-label="Website Mitra Adiperkasa ( new tab )">
-                      <span
-                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                      <span>
-                        Delivery · Domino's Pizza
-                        <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out
-        group-hover/link:-translate-y-full group-hover/link:translate-x-full">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out
-        group-hover/link:translate-x-0 group-hover/link:translate-y-0">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
+          {#each experiences as job}
+            <li class="mb-10">
+              <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
+                <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0,1)] lg:group-hover:drop-shadow-lg"></div>
+                <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2" aria-label={job.year}>
+                  {job.year}
+                </header>
+                <div class="z-10 sm:col-span-6">
+                  <h3 class="font-medium leading-snug text-zinc-200">
+                    <div>
+                      <a class="inline-flex items-baseline font-medium leading-tight text-zinc-200 hover:text-lime-300 focus-visible:text-lime-300 group/link text-base"
+                        href={job.url} target="_blank" rel="noreferrer noopener" aria-label="{job.company} (new tab)">
+                    
+                        <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                    
+                        <span>
+                          {job.role} · {job.company}
+                      
+                          <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out group-hover/link:-translate-y-full group-hover/link:translate-x-full">
+                              <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out group-hover/link:translate-x-0 group-hover/link:translate-y-0">
+                              <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+                            </svg>
+                          </span>
                         </span>
-                      </span>
-                    </a>
-                  </div>
-                </h3>
-                <p class="mt-3 text-sm leading-normal">Bertanggung jawab dalam melayani
-                  pelanggan, menyiapkan pesanan, serta mendukung kelancaran operasional
-                  harian di Domino’s Pizza.</p>
-                <ul class="mt-2 flex flex-wrap" aria-label="Kemampuan yang digunakan">
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Cashier</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Makeline</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Janitor</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Delivery</div>
-                  </li>
-                </ul>
+
+                      </a>
+                    </div>
+                  </h3>
+                  <p class="mt-3 text-sm leading-normal">
+                    {job.description}
+                  </p>
+                  <ul class="mt-2 flex flex-wrap" aria-label="Kemampuan yang digunakan">
+                    {#each job.skills as skill}
+                      <li class="mr-1.5 mt-2">
+                        <div class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
+                          {skill}
+                        </div>
+                      </li>
+                    {/each}
+                  </ul>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="mb-10">
-            <div
-              class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
-              <div
-                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0,1)] lg:group-hover:drop-shadow-lg">
-              </div>
-              <!-- Tahun Bekerja -->
-              <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2"
-                aria-label="Mar sampai Agustus 2024">Mar ─ Aug 2024</header>
-              <!-- Desc&Title -->
-              <div class="z-10 sm:col-span-6">
-                <h3 class="font-medium leading-snug text-zinc-200">
-                  <div>
-                    <a class="inline-flex items-baseline font-medium leading-tight text-zinc-200 hover:text-lime-300 focus-visible:text-lime-300  group/link text-base"
-                      href="https://lessworry.id/" target="_blank" rel="noreferrer noopener"
-                      aria-label="Website LessWorry ( new tab )">
-                      <span
-                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                      <span>
-                        Operator · Less Worry
-                        <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out
-        group-hover/link:-translate-y-full group-hover/link:translate-x-full">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out
-        group-hover/link:translate-x-0 group-hover/link:translate-y-0">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </h3>
-                <p class="mt-3 text-sm leading-normal">Mengerjakan Spotting, mencuci,
-                  mengeringkan, menyetrika, dan mengemas pakaian
-                  dari
-                  konsumen.</p>
-                <ul class="mt-2 flex flex-wrap" aria-label="Kemampuan yang digunakan">
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Spotting</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Wash</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Dryer</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Iron/Fold</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Packing</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="mb-10">
-            <div
-              class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
-              <div
-                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0,1)] lg:group-hover:drop-shadow-lg">
-              </div>
-              <!-- Tahun Bekerja -->
-              <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2"
-                aria-label="Daily Worker Sampai 2024">2023 ─ 2024</header>
-              <!-- Desc&Title -->
-              <div class="z-10 sm:col-span-6">
-                <h3 class="font-medium leading-snug text-zinc-200">
-                  <div>
-                    <a class="inline-flex items-baseline font-medium leading-tight text-zinc-200 hover:text-lime-300 focus-visible:text-lime-300  group/link text-base"
-                      href="https://iaj.co.id/" target="_blank" rel="noreferrer noopener"
-                      aria-label="Website Internusa Abadi Jaya ( new tab )">
-                      <span
-                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                      <span>
-                        Inventory · Internusa
-                        <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out
-        group-hover/link:-translate-y-full group-hover/link:translate-x-full">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out
-        group-hover/link:translate-x-0 group-hover/link:translate-y-0">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </h3>
-                <p class="mt-3 text-sm leading-normal">Mengatur item yang berada di gudang.
-                </p>
-                <ul class="mt-2 flex flex-wrap" aria-label="Kemampuan yang digunakan">
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Inventory Control</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Stock Opname</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      WMS Scanner</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Inbound</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Outbound</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Putaway</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Picking</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Accuracy Check</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="mb-10">
-            <div
-              class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
-              <div
-                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0,1)] lg:group-hover:drop-shadow-lg">
-              </div>
-              <!-- Tahun Bekerja -->
-              <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2">
-                2022 ─ 2023</header>
-              <!-- Desc&Title -->
-              <div class="z-10 sm:col-span-6">
-                <h3 class="font-medium leading-snug text-zinc-200">
-                  <div>
-                    <a class="inline-flex items-baseline font-medium leading-tight text-zinc-200 hover:text-lime-300 focus-visible:text-lime-300  group/link text-base"
-                      href="https://www.wahana.com/" target="_blank" rel="noreferrer noopener"
-                      aria-label="Website Wahana Express ( new tab )">
-                      <span
-                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                      <span>
-                        Kurir · Wahana Prestasi Logistik
-                        <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out
-        group-hover/link:-translate-y-full group-hover/link:translate-x-full">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out
-        group-hover/link:translate-x-0 group-hover/link:translate-y-0">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </h3>
-                <p class="mt-3 text-sm leading-normal">Mengirim paket dari gudang
-                  penyimpanan ke rumah pelanggan yang di tuju.</p>
-                <ul class="mt-2 flex flex-wrap" aria-label="Kemampuan yang digunakan">
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Pickup</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Drop-off</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Routing</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      COD Handling</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Customer Service</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Parcel Scanning</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="mb-10">
-            <div
-              class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
-              <div
-                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0,1)] lg:group-hover:drop-shadow-lg">
-              </div>
-              <!-- Tahun Bekerja -->
-              <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:col-span-2">
-                JAN ─ MAR 2021</header>
-              <!-- Desc&Title -->
-              <div class="z-10 sm:col-span-6">
-                <h3 class="font-medium leading-snug text-zinc-200">
-                  <div>
-                    <a class="inline-flex items-baseline font-medium leading-tight text-zinc-200 hover:text-lime-300 focus-visible:text-lime-300  group/link text-base"
-                      href="https://id.jobstreet.com/id/companies/global-packaging-system-168558673626327"
-                      target="_blank" rel="noreferrer noopener"
-                      aria-label="PT. Global Packaging Stystem Jobstreet profile ( new tab )">
-                      <span
-                        class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                      <span>
-                        Helper · Global Packaging System
-                        <span class="relative inline-block h-4 w-4 overflow-hidden ml-1 align-text-bottom">
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 transition-transform duration-300 ease-in-out
-        group-hover/link:-translate-y-full group-hover/link:translate-x-full">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute inset-0 h-4 w-4 -translate-x-full translate-y-full transition-transform duration-300 ease-in-out
-        group-hover/link:translate-x-0 group-hover/link:translate-y-0">
-                            <path fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"></path>
-                          </svg>
-
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </h3>
-                <p class="mt-3 text-sm leading-normal">Membantu membentuk dan membersihkan
-                  kardus/karton yang akan di distribusikan.
-                </p>
-                <ul class="mt-2 flex flex-wrap" aria-label="Kemampuan yang digunakan">
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Loading</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Unloading</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Sorting</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Packing</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Palletizing</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Moving Goods</div>
-                  </li>
-                  <li class="mr-1.5 mt-2">
-                    <div
-                      class="flex items-center rounded-full bg-lime-400/10 px-3 py-1 text-xs font-medium leading-5 text-lime-300">
-                      Basic QC</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
+            </li>
+          {/each}
         </ol>
         <!-- File Resume Lengkap -->
         <div class="mt-12">

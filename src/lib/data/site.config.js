@@ -36,11 +36,6 @@ export const siteConfig = {
     }
   ],
 
-  // Pengaturan Website
-  site: {
-    title: 'Agung Marwanto',
-    description: 'Saya membuat UI/UX minimalist untuk web.',
-    url: 'https://agungmarwanto.pages.dev/',
-    themeColor: '#09090b',
-  }
+  // Resume PDF
+  resume: "/docs/Resume.pdf"
 };
