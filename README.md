@@ -26,7 +26,6 @@ Inspired by [**brittanychiang.com**](https://brittanychiang.com) · Built with [
 
 </div>
 
-
 ---
 
 ## 🎯 About Project
@@ -36,7 +35,7 @@ It’s built with Svelte for great performance and Tailwind CSS for flexible sty
 
 Here, you’ll find my professional journey, work experience, and some of the projects I’ve worked on.
 
-> *"Simplicity is the ultimate sophistication"* – Leonardo da Vinci
+> _"Simplicity is the ultimate sophistication"_ – Leonardo da Vinci
 
 ## 🛠️ Development
 

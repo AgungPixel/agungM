@@ -23,7 +23,7 @@
 	}
 
 	html {
-		@apply font-sans scroll-smooth;
+		@apply scroll-smooth font-sans;
 	}
 
 	body {
