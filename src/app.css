@@ -27,7 +27,7 @@
 	}
 
 	body {
-		@apply bg-zinc-950 leading-relaxed text-zinc-400 antialiased;
+		@apply bg-zinc-950 leading-relaxed text-zinc-400 antialiased selection:bg-lime-300 selection:text-lime-900;
 	}
 
 	h1 {

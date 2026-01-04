@@ -1,5 +1,6 @@
 <script>
-	import Header from '$lib/components/header.svelte';
+	import NavigationLinks from '$lib/components/navigation.svelte';
+	import SocialLinks from '$lib/components/socialMedia.svelte';
 	import Starfield from '$lib/components/Starfield.svelte';
 	import ArrowIcon from '$lib/icons/arrowIcons.svelte';
 	import { onMount } from 'svelte';
@@ -54,7 +55,17 @@
 	<div class="pointer-events-none absolute inset-0 z-0">
 		<Starfield />
 	</div>
-	<Header />
+	<header
+	class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
+>
+	<div>
+		<h1><a href="/">{siteConfig.author.name}</a></h1>
+		<h2>{siteConfig.author.role}</h2>
+		<p class="mt-2 max-w-xs leading-normal">{siteConfig.author.bio}</p>
+		<NavigationLinks />
+	</div>
+	<SocialLinks links={siteConfig.socials} />
+	</header>
 	<main id="content" class="pt-24 lg:w-[52%] lg:py-24">
 		<section id="tentang" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
 			<div

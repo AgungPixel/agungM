@@ -1,11 +1,8 @@
 <script>
-	/* INI ADALAH TAILWINDCSS */
 	import '../app.css';
-	/* children tidak bisa di ubah !!! hanya rename saja */
 	let { children } = $props();
 </script>
 
-<!-- Ini untuk menambah elemen HTML <head> -->
 <svelte:head>
 	<title>Agung Marwanto</title>
 	<meta
@@ -30,10 +27,9 @@
 </svelte:head>
 <!-- Main container global -->
 
-<div class="relative">
+<div>
 	<div class="glow-effect" id="glowEffect"></div>
 	<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-16 lg:py-0">
 		{@render children()}
 	</div>
 </div>
-<!-- LAYOUT ITU TAMPIL DI SEMUA HALAMAN ! TARUH HEADER DAN FOOTERNYA DISINI -->
