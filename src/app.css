@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
-
 @layer base {
 	@font-face {
 		font-family: 'Inter';
