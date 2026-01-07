@@ -12,9 +12,6 @@
 
 	<meta name="robots" content="index, follow" />
 
-	<!-- Canonical -->
-	<link rel="canonical" href="https://agungmarwanto.pages.dev" />
-
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Agung Marwanto — Frontend Engineer" />
