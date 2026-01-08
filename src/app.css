@@ -45,15 +45,23 @@
 		@apply relative;
 	}
 
-	.glow-effect {
-		position: fixed;
-		width: 1000px;
-		height: 1000px;
-		margin-left: -500px;
-		margin-top: -500px;
-		background: radial-gradient(circle, rgba(102, 102, 102, 0.05) 0%, rgba(102, 102, 102, 0) 50%);
-		pointer-events: none;
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
+	.glow-container {
+        /* Default Mobile: Diam di atas */
+        background: radial-gradient(
+            600px circle at 50% 0px, 
+            rgba(219, 218, 218, 0.05), 
+            transparent 50%
+        );
+    }
+
+    /* Desktop: Mengikuti Mouse */
+    @media (min-width: 1024px) {
+        .glow-container {
+            background: radial-gradient(
+                600px circle at var(--x, 50%) var(--y, 50%), 
+                rgba(102, 102, 102, 0.05), 
+                transparent 50%
+            );
+        }
+    }
 }

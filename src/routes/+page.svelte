@@ -6,7 +6,6 @@
 	import { onMount } from 'svelte';
 
 	// Pastikan import ini benar (sesuai nama export di file masing-masing)
-	import { initGlowEffect } from '$lib/utils/glowEffect.js';
 	import { isIdle } from '$lib/stores/idle.js';
 	// Import data yang baru dibuat
 	import { aboutData } from '$lib/data/about.js';
@@ -14,36 +13,6 @@
 	import { projects } from '$lib/data/projects';
 	import { siteConfig } from '$lib/data/site.config'; // Kalau mau pakai link resume dari config
 	import ArrowIcons from '$lib/icons/arrowIcons.svelte';
-
-	let cleanupGlowEffect;
-
-	onMount(() => {
-		// --- 1. Setup Glow Effect (Dengan Pengecekan) ---
-		// Cek apakah fungsi initGlowEffect ada sebelum dijalankan
-		if (typeof initGlowEffect === 'function') {
-			const effect = initGlowEffect();
-			// Cek apakah effect mengembalikan object yang benar
-			if (effect && effect.setupEffect) {
-				effect.setupEffect();
-				cleanupGlowEffect = effect.cleanupEffect;
-			}
-		} else {
-			console.warn('Glow Effect tidak ditemukan atau gagal dimuat.');
-		}
-
-		// --- 2. Setup Idle Listener (Dengan Pengecekan) ---
-		let cleanupIdle;
-		if (isIdle && typeof isIdle.init === 'function') {
-			cleanupIdle = isIdle.init();
-		}
-
-		// --- 3. Cleanup Gabungan ---
-		return () => {
-			// Hanya jalankan cleanup jika fungsinya ada (valid)
-			if (typeof cleanupGlowEffect === 'function') cleanupGlowEffect();
-			if (typeof cleanupIdle === 'function') cleanupIdle();
-		};
-	});
 </script>
 
 <a

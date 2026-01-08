@@ -1,6 +1,24 @@
 <script>
 	import '../app.css';
+	import { onMount } from 'svelte';
+
 	let { children } = $props();
+
+	onMount(() => {
+        // Target elemen background yang FIXED (Diam)
+        const glowOverlay = document.getElementById('glow-overlay');
+
+        const updateGlow = (e) => {
+            if (glowOverlay) {
+                // Kirim koordinat mouse ke CSS variable
+                glowOverlay.style.setProperty('--x', `${e.clientX}px`);
+                glowOverlay.style.setProperty('--y', `${e.clientY}px`);
+            }
+        };
+
+        window.addEventListener('mousemove', updateGlow);
+        return () => window.removeEventListener('mousemove', updateGlow);
+    });
 </script>
 
 <svelte:head>
@@ -24,8 +42,11 @@
 </svelte:head>
 <!-- Main container global -->
 
+<div 
+    id="glow-overlay" 
+    class="fixed inset-0 z-[-1] pointer-events-none glow-container"
+></div>
 <div>
-	<div class="glow-effect" id="glowEffect"></div>
 	<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-16 lg:py-0">
 		{@render children()}
 	</div>
