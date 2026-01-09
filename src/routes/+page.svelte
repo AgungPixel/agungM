@@ -13,6 +13,22 @@
 	import { projects } from '$lib/data/projects';
 	import { siteConfig } from '$lib/data/site.config'; // Kalau mau pakai link resume dari config
 	import ArrowIcons from '$lib/icons/arrowIcons.svelte';
+
+	onMount(() => {
+        // --- 1. Setup Idle Listener (Sisa logic yang masih berguna) ---
+        let cleanupIdle;
+        
+        // Cek store isIdle
+        if (isIdle && typeof isIdle.init === 'function') {
+            cleanupIdle = isIdle.init();
+        }
+
+        // --- 2. Cleanup ---
+        return () => {
+            // Bersihkan idle listener saat halaman ditutup
+            if (typeof cleanupIdle === 'function') cleanupIdle();
+        };
+    });
 </script>
 
 <a
