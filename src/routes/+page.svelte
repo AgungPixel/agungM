@@ -1,45 +1,23 @@
 <script>
 	import NavigationLinks from '$lib/components/navigation.svelte';
 	import SocialLinks from '$lib/components/socialMedia.svelte';
-	import Starfield from '$lib/components/Starfield.svelte';
 	import ArrowIcon from '$lib/icons/arrowIcons.svelte';
 	import { onMount } from 'svelte';
-
-	// Pastikan import ini benar (sesuai nama export di file masing-masing)
-	import { isIdle } from '$lib/stores/idle.js';
 	// Import data yang baru dibuat
 	import { aboutData } from '$lib/data/about.js';
 	import { experiences } from '$lib/data/experiences';
 	import { projects } from '$lib/data/projects';
 	import { siteConfig } from '$lib/data/site.config'; // Kalau mau pakai link resume dari config
 	import ArrowIcons from '$lib/icons/arrowIcons.svelte';
-
-	onMount(() => {
-        // --- 1. Setup Idle Listener (Sisa logic yang masih berguna) ---
-        let cleanupIdle;
-        
-        // Cek store isIdle
-        if (isIdle && typeof isIdle.init === 'function') {
-            cleanupIdle = isIdle.init();
-        }
-
-        // --- 2. Cleanup ---
-        return () => {
-            // Bersihkan idle listener saat halaman ditutup
-            if (typeof cleanupIdle === 'function') cleanupIdle();
-        };
-    });
 </script>
 
 <a
-	href="#content"
-	class="from absolute left-0 top-0 block -translate-x-full rounded bg-lime-400 bg-gradient-to-br via-lime-500 to-lime-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white focus-visible:translate-x-0"
-	>Langsung Ke Content</a
+    href="#content"
+    class="fixed left-0 top-0 z-50 block -translate-x-full rounded bg-gradient-to-br from-lime-400 via-lime-500 to-lime-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white transition-transform focus-visible:translate-x-0"
 >
+    Langsung Ke Content
+</a>
 <div class="lg:flex lg:justify-between lg:gap-4">
-	<div class="pointer-events-none absolute inset-0 z-0">
-		<Starfield />
-	</div>
 	<header
 	class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
 >

@@ -196,15 +196,32 @@
 	}
 
 	onMount(() => {
-		ctx = canvas.getContext('2d');
-		initCanvasSize();
-		window.addEventListener('resize', initCanvasSize);
-	});
+		// A. Setup Canvas
+        ctx = canvas.getContext('2d');
+        initCanvasSize();
+        window.addEventListener('resize', initCanvasSize);
+
+        // --- 1. Setup Idle Listener (Sisa logic yang masih berguna) ---
+        let cleanupIdle;
+        
+        // Cek store isIdle
+        if (isIdle && typeof isIdle.init === 'function') {
+            cleanupIdle = isIdle.init();
+        }
+
+        // --- 2. Cleanup ---
+        return () => {
+            // Bersihkan idle listener saat halaman ditutup
+            if (typeof cleanupIdle === 'function') cleanupIdle();
+			// Bersihkan listener resize (opsional, krn onDestroy juga handle ini, tapi gpp disini)
+            window.removeEventListener('resize', initCanvasSize);
+        };
+    });
 
 	onDestroy(() => {
 		if (!browser) return;
 		if (animationFrameId) cancelAnimationFrame(animationFrameId);
-		window.removeEventListener('resize', initCanvasSize);
+		// window.removeEventListener('resize', initCanvasSize);
 		unsubscribeIdle();
 	});
 </script>
