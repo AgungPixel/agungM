@@ -4,8 +4,6 @@
 	import Starfield from '$lib/components/Starfield.svelte';
     import Glow from '$lib/components/Glow.svelte';
 
-    import { onMount } from 'svelte';
-
     let { children } = $props();
 </script>
 
