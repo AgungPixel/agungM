@@ -14,6 +14,7 @@
         content="Agung Marwanto adalah freelance frontend developer yang fokus membangun website modern, cepat, dan minimalist. Berpengalaman di berbagai bidang dan terus belajar teknologi web."
     />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09090b" />
     
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Agung Marwanto — Frontend Engineer" />

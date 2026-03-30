@@ -20,7 +20,7 @@
             });
         };
 
-        window.addEventListener('mousemove', updateGlow);
+        window.addEventListener('mousemove', updateGlow, { passive: true });
 
         return () => {
             window.removeEventListener('mousemove', updateGlow);
