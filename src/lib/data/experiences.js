@@ -1,6 +1,6 @@
 export const experiences = [
 	{
-		year: '2025 ─ 2026',
+		year: '2025 ─ Present',
 		company: "Domino's Pizza",
 		role: 'Delivery',
 		url: 'https://www.map.co.id/id/',
