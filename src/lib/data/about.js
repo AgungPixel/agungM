@@ -3,12 +3,12 @@
 export const aboutData = {
 	// 1. Data Paragraf (Bisa ditambah/dikurang sesuka hati)
 	paragraphs: [
-		`Halo, saya seorang pribadi dengan latar belakang di bidang marketing dan pengalaman kerja yang luas di berbagai sektor, termasuk operasional, pengiriman, serta layanan khusus di industri laundry dan outdoor. Lulusan Yayasan SMK Ekawijaya pada tahun 2015, saya sedang mengembangkan keahlian di bidang teknologi dan sangat antusias dalam belajar hal-hal baru, terutama di bidang pengembangan web dan aplikasi.`,
+		`Halo! Saya adalah seorang profesional dengan pengalaman kerja di berbagai sektor operasional, logistik, pemasaran, hingga layanan retail. Sejak lulus dari Yayasan SMK Ekawijaya pada tahun 2015, saya terus mengembangkan minat dan keahlian di bidang teknologi, khususnya dalam pengembangan web (web development) dan pemrograman aplikasi.`,
 
 		// Perhatikan: Kita menaruh Link HTML di dalam string ini agar fleksibel
-		`Sekarang, saya sedang bekerja sebagai part-time di <a class="text-zinc-100 font-medium hover:text-lime-300 transition-colors" href="https://www.map.co.id/id/" target="_blank" rel="noreferrer noopener">Mitra Adiperkasa</a>, di bagian delivery dan staff. Perusahaan ritel terkemuka di Indonesia yang mengelola berbagai merek internasional di bidang fashion, olahraga, makanan dan minuman, serta produk gaya hidup lainnya.`,
+		`Saat ini, saya aktif bekerja paruh waktu (part-time) sebagai staf operasional & delivery di <a class="text-zinc-100 font-medium hover:text-lime-300 transition-colors" href="https://www.dominos.co.id/" target="_blank" rel="noreferrer noopener">Domino's Pizza Indonesia</a>.`,
 
-		`Di pengalaman terakhir saya, saya bekerja sebagai content creator, sebagai inventory daily worker di lazada serta pernah bekerja sebagai operator di SPBU selama 3 tahun.`
+		`Sebelumnya, saya juga memiliki pengalaman berharga sebagai content creator, pekerja inventaris (inventory control) di Lazada, serta pernah bertugas sebagai operator layanan di SPBU selama 3 tahun. Ragam pengalaman ini membentuk saya menjadi pribadi yang adaptif, berorientasi pada detail, dan terbiasa bekerja secara tim.`
 	],
 
 	// 2. Data Link Khusus (Untuk bagian animasi bawah)

@@ -3,8 +3,8 @@ export const siteConfig = {
 	// Data Pribadi (User tinggal ganti ini)
 	author: {
 		name: 'Agung Marwanto',
-		role: 'Freelancer',
-		bio: 'Saya membuat UI/UX minimalist untuk web.'
+		role: 'Junior Web Developer',
+		bio: 'Sedang mengembangkan keahlian membuat web minimalis & responsif.'
 	},
 
 	// Social Media

@@ -3,7 +3,7 @@ export const experiences = [
 		year: '2025 ─ Present',
 		company: "Domino's Pizza",
 		role: 'Delivery',
-		url: 'https://www.map.co.id/id/',
+		url: 'https://www.dominos.co.id/',
 		description:
 			'Bertanggung jawab dalam melayani pelanggan, menyiapkan pesanan, serta mendukung kelancaran operasional harian di Domino’s Pizza.',
 		skills: ['Cashier', 'Makeline', 'Janitor', 'Delivery']
